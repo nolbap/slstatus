@@ -10,6 +10,8 @@ Brightness - Volume - Date - Time
 
 - xbacklight
 - amixer
+- wifi script from my dotfiles
+- getsound script from my dotfiles
 
 ## Installing
 

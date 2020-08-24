@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 50;
+const unsigned int interval = 60;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -63,7 +63,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, "| 🌑 %s%% ", "xbacklight -get"},
-	{ run_command, "| 🔊 %s ", "amixer sget Master | awk -F \"[][]\" '/%/ { print $2 }' |  head -n1" },
-	{ datetime, "%s",           "| 📆 %A %B %d | ⏲ %r |" },
+	{ run_command, "|%s",	    "wifi"},
+	{ run_command, "|  %s%% ", "xbacklight -get"},
+	{ run_command, "|%s",	    "getsound" },
+	{ datetime, "%s",           "|  %A %B %d |  %r |" },
 };
